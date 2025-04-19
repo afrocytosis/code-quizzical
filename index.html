@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="quiz-container">
+    <h2 id="question"></h2>
+    <input type="text" id="answer-input" placeholder="Your answer">
+    <button id="submit-answer" onclick="submitAnswer()">Submit</button>
+
+    <div id="message"></div>
+
+    <button id="exit-button" onclick="exitQuiz()">Exit Quiz</button>
+    <button id="reset-button" onclick="resetQuiz()">Reset Quiz</button>
+
+    <div id="confetti"></div>
+
+    <div id="incorrect-answers-list">
+        <h3>Incorrect Answers:</h3>
+        <ul id="incorrect-questions"></ul>
+        <button id="retry-button" onclick="retryIncorrect()">Retry Incorrect</button>
+    </div>
+</div>
+
+<!-- Confirmation Modal for Exit -->
+<div id="exit-modal" class="modal">
+    <div class="modal-content">
+        <p>Are you sure you want to exit the quiz?</p>
+        <button onclick="confirmExit()">Yes</button>
+        <button onclick="closeModal()">No</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
